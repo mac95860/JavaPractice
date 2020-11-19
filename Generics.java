@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Machine {
+class Machines {
  public String toString() {
      return "I am a Machine"; 
  }
@@ -10,7 +10,7 @@ class Machine {
  }
 }
 
-class Camera extends Machine {
+class Camera extends Machines {
     
     public String toString() {
         return "I am a Camera";
@@ -23,10 +23,10 @@ class Camera extends Machine {
 
 public class Generics {
      public static void main(String[] args) {
-        ArrayList<Machine> list1 = new ArrayList<Machine>();
+        ArrayList<Machines> list1 = new ArrayList<Machines>();
 
-        list1.add(new Machine());
-        list1.add(new Machine());
+        list1.add(new Machines());
+        list1.add(new Machines());
         
         ArrayList<Camera> list2 = new ArrayList<Camera>();
 
@@ -39,8 +39,8 @@ public class Generics {
     }
     // ? is the wild card and can extend to any class that extends Machine
 
-    public static void showList(ArrayList<? extends Machine> list) {
-        for(Machine value: list) {
+    public static void showList(ArrayList<? extends Machines> list) {
+        for(Machines value: list) {
             System.out.println(value);
             value.start();
         }
