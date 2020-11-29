@@ -9,4 +9,8 @@ public class Test {
 
         throw new ParseException("Error in Command List", 2);
     }
+
+    public void input() throws IOException, {
+        
+    }
 }
